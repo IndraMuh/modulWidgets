@@ -1,15 +1,21 @@
+//Scaffold widget digunakan untuk mengatur tata letak sesuai dengan material design.
+//Contoh penggunaan scaffold widget pada source code dan ouputnya adalah sebagai berikut:
+
+import 'package:belajar/InputNSelection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(Scaff());
 }
 
-//Scaffold widget digunakan untuk mengatur tata letak sesuai dengan material design.
-//Contoh penggunaan scaffold widget pada source code dan ouputnya adalah sebagai berikut:
+class Scaff extends StatefulWidget {
+  @override
+  _ScaffState createState() => _ScaffState();
+}
 
-class Scaff extends StatelessWidget {
+class _ScaffState extends State<Scaff> {
   int _count = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,27 +24,35 @@ class Scaff extends StatelessWidget {
         appBar: AppBar(
           title: Text('Sample Code'),
         ),
-        body: Center(
-          child: Text('You have pressed the button $_count times.'),
+        body: Column(
+          children: [
+            InputNSelection(),
+            Center(
+              child: Text('You have pressed the button $_count times.'),
+            ),
+          ],
         ),
         bottomNavigationBar: BottomNavigationBar(
-            selectedItemColor: Colors.red,
-            unselectedItemColor: Colors.grey,
-            currentIndex: 2,
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home,
-                ),
-                label: "home",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.card_giftcard),
-                label: "Profile",
-              )
-            ]),
+          selectedItemColor: Colors.red,
+          unselectedItemColor: Colors.grey,
+          currentIndex: 0, // Mengatur currentIndex ke nilai yang valid
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "Home",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.card_giftcard),
+              label: "Profile",
+            ),
+          ],
+        ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () => 0,
+          onPressed: () {
+            setState(() {
+              _count++;
+            });
+          },
           tooltip: 'Increment Counter',
           child: Icon(Icons.add),
         ),

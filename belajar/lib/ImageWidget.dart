@@ -12,7 +12,9 @@ class ImageWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Image(
-        image: AssetImage('assets/2.png'),
+        image: AssetImage('assets/foto.png'),
+        //   width: 20.0,
+        //   height: 20.0,
       ),
     );
   }

@@ -8,20 +8,31 @@ void main() {
   runApp(InputNSelection());
 }
 
-class InputNSelection extends StatelessWidget {
+class InputNSelection extends StatefulWidget {
+  @override
+  State<InputNSelection> createState() => _InputNSelectionState();
+}
+
+class _InputNSelectionState extends State<InputNSelection> {
+  TextEditingController nama = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text("Contoh TextField")),
-        body: TextField(
+    return Column(
+      children: [
+        TextField(
+          controller: nama,
           obscureText: false,
+          onChanged: (a) {
+            setState(() {});
+          },
           decoration: InputDecoration(
             border: OutlineInputBorder(),
             labelText: 'Nama',
           ),
         ),
-      ),
+        Text(nama.text),
+      ],
     );
   }
 }

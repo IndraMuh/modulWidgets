@@ -10,9 +10,8 @@ void main() => runApp(Date());
 class Date extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Contoh Date Picker',
-      home: MyHomePage(title: 'Contoh Date Picker'),
+    return MyHomePage(
+      
     );
   }
 }
@@ -45,12 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
+    return Center(
         child: Column(
+      debugShowCheckedModeBanner: false,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             // Menampilkan tanggal yang dipilih
@@ -69,7 +65,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }

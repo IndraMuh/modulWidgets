@@ -1,8 +1,3 @@
-//Scaffold widget digunakan untuk mengatur tata letak sesuai dengan material design.
-//Contoh penggunaan scaffold widget pada source code dan ouputnya adalah sebagai berikut:
-
-import 'package:belajar/DatePicker.Dart';
-import 'package:belajar/ImageWidget.dart';
 import 'package:belajar/InputNSelection.dart';
 import 'package:flutter/material.dart';
 
@@ -26,11 +21,9 @@ class _ScaffState extends State<Scaff> {
         appBar: AppBar(
           title: Text('Sample Code'),
         ),
-        body: ListView(
+        body: Column(
           children: [
             InputNSelection(),
-            MyHomePage(),
-            ImageWidget(),
             Center(
               child: Text('You have pressed the button $_count times.'),
             ),
