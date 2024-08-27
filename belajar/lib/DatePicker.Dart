@@ -46,7 +46,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Center(
         child: Column(
-      debugShowCheckedModeBanner: false,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             // Menampilkan tanggal yang dipilih
