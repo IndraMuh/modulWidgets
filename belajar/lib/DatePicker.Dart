@@ -10,9 +10,7 @@ void main() => runApp(Date());
 class Date extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MyHomePage(
-      
-    );
+    return MaterialApp(home: MyHomePage());
   }
 }
 
@@ -44,26 +42,31 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            // Menampilkan tanggal yang dipilih
-            Text("${selectedDate.toLocal()}".split(' ')[0]),
-            SizedBox(
-              height: 20.0,
-            ),
-            // Tombol untuk memilih tanggal
-            ElevatedButton(
-              onPressed: () {
-                _selectDate(context);
-                print(
-                    selectedDate.day + selectedDate.month + selectedDate.year);
-              },
-              child: Text('Pilih Tanggal'),
-            ),
-          ],
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              // Menampilkan tanggal yang dipilih
+              Text("${selectedDate.toLocal()}".split(' ')[0]),
+              SizedBox(
+                height: 20.0,
+              ),
+              // Tombol untuk memilih tanggal
+              ElevatedButton(
+                onPressed: () {
+                  _selectDate(context);
+                  print(selectedDate.day +
+                      selectedDate.month +
+                      selectedDate.year);
+                },
+                child: Text('Pilih Tanggal'),
+              ),
+            ],
+          ),
         ),
-      );
+      ),
+    );
   }
 }

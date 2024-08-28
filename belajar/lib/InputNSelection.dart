@@ -18,21 +18,25 @@ class _InputNSelectionState extends State<InputNSelection> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        TextField(
-          controller: nama,
-          obscureText: false,
-          onChanged: (a) {
-            setState(() {});
-          },
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: 'Nama',
-          ),
+    return MaterialApp(
+      home: Scaffold(
+        body: Column(
+          children: [
+            TextField(
+              controller: nama,
+              obscureText: false,
+              onChanged: (a) {
+                setState(() {});
+              },
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Nama',
+              ),
+            ),
+            Text(nama.text),
+          ],
         ),
-        Text(nama.text),
-      ],
+      ),
     );
   }
 }

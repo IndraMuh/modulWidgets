@@ -90,24 +90,11 @@ class _PraktikState extends State<Praktik> {
                               Border.all(color: Colors.lightGreen, width: 2)),
                       child: Column(
                         children: [
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Container(
-                              child: Row(children: [
-                                Image(
-                                  image: AssetImage('assets/mbappe.jpeg'),
-                                  height: 250,
-                                  width: 430,
-                                  fit: BoxFit.cover,
-                                ),
-                                Image(
-                                  image: AssetImage('assets/mbappe2.jpeg'),
-                                  height: 250,
-                                  width: 430,
-                                  fit: BoxFit.cover,
-                                ),
-                              ]),
-                            ),
+                          Image(
+                            image: AssetImage('assets/mbappe.jpeg'),
+                            height: 250,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
                           ),
                           Container(
                             padding: EdgeInsets.only(top: 10, bottom: 10),
@@ -133,8 +120,6 @@ class _PraktikState extends State<Praktik> {
                         ],
                       ),
                     ),
-                    Madrid(),
-                    Madrid(),
                     Madrid(),
                     Madrid(),
                     Madrid(),
