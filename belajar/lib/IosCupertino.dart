@@ -10,12 +10,20 @@ class Ioscupertino extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Container(
         margin: EdgeInsets.only(top: 30),
         color: Colors.white,
         child: Column(
           children: <Widget>[
-            AppBar(title: Text('Contoh Cupertino')),
+            AppBar(
+              title: Text(
+                'Contoh Cupertino',
+                style: TextStyle(color: Colors.white),
+              ),
+              centerTitle: true,
+              backgroundColor: Colors.blue,
+            ),
             CupertinoButton(
               child: Text("Contoh button"),
               onPressed: () {},

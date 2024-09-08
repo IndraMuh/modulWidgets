@@ -55,3 +55,89 @@ class Stackk extends StatelessWidget {
     );
   }
 }
+
+
+// stack pak abidin
+
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(StackPosition());
+// }
+
+// class StackPosition extends StatelessWidget {
+//   const StackPosition({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: Scaffold(
+//         body: Container(
+//           child: Column(
+//             children: [
+//               Container(
+//                   height: 200,
+//                   width: double.infinity,
+//                   decoration: BoxDecoration(
+//                       color: Colors.green,
+//                       borderRadius: BorderRadius.only(
+//                           bottomLeft: Radius.circular(20),
+//                           bottomRight: Radius.circular(20))),
+//                   child: Stack(
+//                     children: [
+//                       Positioned(
+//                         left: 140,
+//                         child: Image(
+//                           image: AssetImage('assets/money.png'),
+//                         ),
+//                       ),
+//                       Positioned(
+//                         top: 150,
+//                         left: 50,
+//                         child: Text(
+//                           "Saldo Rp. 1.000.000,-",
+//                           style: TextStyle(
+//                               fontWeight: FontWeight.bold, fontSize: 15),
+//                         ),
+//                       ),
+//                       Positioned(
+//                         top: 148,
+//                         left: 340,
+//                         child: Icon(Icons.verified_user),
+//                       )
+//                     ],
+//                   )
+//                   // Column(
+//                   //   children: [
+//                   //     Container(
+//                   //       alignment: Alignment.center,
+//                   //       child: Image(
+//                   //         image: AssetImage('assets/money.png'),
+//                   //       ),
+//                   //     ),
+//                   //     Container(
+//                   //       width: MediaQuery.of(context).size.width,
+//                   //       padding: EdgeInsets.only(left: 10, right: 10),
+//                   //       child: Row(
+//                   //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+//                   //         children: [
+//                   //           Text("Saldo Rp. 1.000.000,-"),
+//                   //           Icon(Icons.verified_user)
+//                   //         ],
+//                   //       ),
+//                   //     ),
+//                   //   ],
+//                   // ),
+//                   ),
+//               Container(
+//                 child: Text("acc"),
+//               ),
+//               Container()
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
